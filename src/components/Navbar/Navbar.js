@@ -1,12 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { FaGithub } from 'react-icons/fa'
-import { SiTwitter } from 'react-icons/si'
 import { RiSearch2Line } from 'react-icons/ri'
 import { IconContext } from 'react-icons/lib'
 
-import { ReactComponent as Logo } from '../../assets/svg/fonty.svg'
+import { ReactComponent as Logo } from '../../assets/svg/din.svg'
 
 
 function Navbar() {
@@ -31,11 +29,6 @@ function Navbar() {
                                         <FaGithub className="navbar-icon" />
                                     </Link>
                                 </li> */}
-                                <li className="nav-item last">
-                                    <Link to='/' className="nav-links">
-                                        <p className="search-text">Search Fonty</p>
-                                    </Link>
-                                </li>
                                 <li className="nav-item last">
                                     <Link to='/' className="nav-links">
                                         <RiSearch2Line className="search-icon" />

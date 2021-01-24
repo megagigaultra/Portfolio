@@ -1,6 +1,6 @@
 .navbar{
     background: $primary;
-    height: 80px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,12 +15,10 @@
             cursor: pointer;
             font-size: 2rem;
             height: 3.5rem;
-            width: 3.5rem;
             border-radius: 100%;
             display:flex;
             .navbar-icon{
                 height: 100%;
-                width: 2rem;
             }
             .nav-links{
                 height: 100%;

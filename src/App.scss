@@ -5,9 +5,8 @@
 //Colors
 $primary : #0f1922;
 $secondary : #0001FF;
-$warning : #ddf24d;
-$safe : #ee9235;
-$pale :  #cfd0d1;
+$warning : #FF6E42;
+$pale : #82888B;
 
 .primary{
   color: $primary
@@ -17,9 +16,6 @@ $pale :  #cfd0d1;
 }
 .warning{
   color: $warning
-}
-.safe{
-  color: $safe
 }
 .pale{
   color: $pale
@@ -45,10 +41,11 @@ body{
 }
 
 h2{
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 4rem;
+  line-height: 4.5rem;
   font-weight: 500;
   text-transform: uppercase;
+  padding-left: .5rem;
 }
 
 h3{
@@ -74,8 +71,8 @@ h5{
 .line{
   flex: 1;
   height: 1px;
-  background-color: $pale;
-  opacity: .4;
+  background-color: #FFF;
+  opacity: .6;
 }
 
 .frame{
@@ -157,5 +154,6 @@ h5{
 
 
 //Styles
+@import './components/Social/Social.scss';
 @import './components/Landing/Landing.scss';
 @import './components/Navbar/Navbar.scss';

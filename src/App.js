@@ -3,8 +3,7 @@ import './App.scss';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Landing from './components/Landing/Landing';
-import Blog from './components/Blog/Blog';
-import Quote from './components/Quote/Quote';
+import Social from './components/Social/Social';
 
 function App() {
 
@@ -17,8 +16,7 @@ function App() {
     <Router>
       <Navbar />
       <Landing />
-      <Quote />
-      <Blog />
+      <Social />
       <Switch>
         <Route path='/' />
       </Switch>
