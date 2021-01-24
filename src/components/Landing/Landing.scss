@@ -1,0 +1,100 @@
+.landing{
+    height: calc(var(--vh, 1vh) * 100 - 80px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    padding-top: 1rem;
+    .shortcuts{
+        .shortcut{
+            display: flex;
+            align-items: center;
+            .arrow-container{
+                height: 3rem;
+                width: 3rem;
+                margin-right: 1rem;
+                .arrow{
+                    height: 100%;
+                    &.right-down{
+                        transform: rotate(45deg);
+                    };
+                    &.down{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+    }
+    .background{
+        flex: 1;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        .logo-shape{
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .shape-long{
+                transform: translateX(-50%);
+                width: 100%;
+                height: 33vw;
+                border: 1px solid white;
+                border-radius: 16.5vw;
+            }
+            .shape-short{
+                /* transform: translateX(50%); */
+                margin-left: auto;
+                width: 33vw;
+                height: 33vw;
+                border: 1px solid white;
+                border-radius: 16.5vw;
+            }
+        }
+        .landing-img{
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            .scroll{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                position: absolute;
+                bottom: 1rem;
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+            .gradient{
+                position: absolute;
+                top: 0;
+                opacity: 1;
+                background: rgb(15,25,32);
+                background: radial-gradient(circle,
+                    rgba(15,25,32,1) 0%,
+                    rgba(15,25,34,0) 80%);
+                height: 250%;
+                width: 200%;
+                transform: translateX(-25%);
+            }
+            .dark{
+                position: absolute;
+                top: 0;
+                background-color: $primary;
+                opacity: .05;
+                height: 100%;
+                width: 100%;
+            }
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
