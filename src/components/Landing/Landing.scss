@@ -1,5 +1,8 @@
 .landing{
     height: calc(var(--vh, 1vh) * 100 - 70px);
+    @include media(">=tablet") {
+        height: calc(100vh - 100px);
+    };
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -8,6 +11,9 @@
     .background{
         position: relative;
         height: 100vw;
+        @include media(">=tablet") {
+            height: 100%;
+        };
         width: 100%;
         overflow: hidden;
         .shape{
@@ -66,27 +72,22 @@
             }
         }
     }
-    .calltoaction{
+    .footy{
+        @include media(">=tablet") {
+            position: absolute;
+            bottom: 0;
+        };
         flex: 1;
         display: flex;
         flex-direction: column;
-        padding-top: 1.5rem;
-        .asterisk{
-            font-size: .7rem;
-            line-height: 0;
-        }
+        justify-content: flex-end;
         .bgc{
             background-color: $warning;
         }
-    }
-    .footy{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        position: absolute;
-        bottom: 1.5rem;
-        .asterisk{
-            font-size: .7rem;
+        .arrow{
+            position: relative;
+            bottom: 1.5rem;
+            margin-left: auto;
         }
     }
 }

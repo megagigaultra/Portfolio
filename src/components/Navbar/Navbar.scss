@@ -1,56 +1,64 @@
 .navbar{
     background: $primary;
     height: 70px;
+    @include media(">=tablet") {
+        height: 100px;
+    };
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 999;
-    .container {
-        flex: 1;
-        display: flex;
-        justify-content: space-between;
-        .navbar-logo{
-            cursor: pointer;
-            font-size: 2rem;
-            height: 3.5rem;
-            border-radius: 100%;
-            display:flex;
-            .navbar-icon{
-                height: 100%;
-            }
-            .nav-links{
-                height: 100%;
-                display: flex;
-                align-items: center;
-                text-decoration: none;
-                h1{
-                    font-size: 1.7rem;
-                    font-weight: 700;
-                    color: #FFF;
-                }
-            }
-        }
-        .navbar-social{
+    .media{
+        width: 100%;
+        @include media(">desktop") {
+            width: 70%;
+        };
+        .container {
             display: flex;
-            align-items: center;
-            border-radius: 40px;
-            list-style: none;
-            .nav-item{
-                margin-left: 1rem;
-                a{
-                    text-decoration: none;
-                }
-                .search-text{
-                    opacity: .7;
-                    font-size: 1.2rem;
-                    margin-bottom: .2rem;
-                    color: #FFFFFF;
+            justify-content: space-between;
+            .navbar-logo{
+                cursor: pointer;
+                font-size: 2rem;
+                height: 3.5rem;
+                border-radius: 100%;
+                display:flex;
+                .navbar-icon{
+                    height: 100%;
                 }
                 .nav-links{
+                    height: 100%;
                     display: flex;
-                    font-size: 2rem;
+                    align-items: center;
+                    text-decoration: none;
+                    h1{
+                        font-size: 1.7rem;
+                        font-weight: 700;
+                        color: #FFF;
+                    }
+                }
+            }
+            .navbar-social{
+                display: flex;
+                align-items: center;
+                border-radius: 40px;
+                list-style: none;
+                .nav-item{
+                    margin-left: 1rem;
+                    a{
+                        text-decoration: none;
+                    }
+                    .search-text{
+                        opacity: .7;
+                        font-size: 1.2rem;
+                        margin-bottom: .2rem;
+                        color: #FFFFFF;
+                    }
+                    .nav-links{
+                        display: flex;
+                        font-size: 2rem;
+                    }
                 }
             }
         }
