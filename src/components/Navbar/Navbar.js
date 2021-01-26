@@ -11,7 +11,7 @@ function Navbar() {
     return (
         <>
                 <div className="navbar">
-                    <div className="media">
+                    <div className="media lg">
                         <div className="container">
                             <div className="navbar-logo">
                                 <Link to='/' className="nav-links">

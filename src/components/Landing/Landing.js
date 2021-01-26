@@ -24,12 +24,14 @@ function Landing() {
                         <img src={landingImage} alt="background letters"/>
                     </div>
                 </div>
-                <div className="container footy index1">
-                    {/* <span className="asterisk">*Under construction</span> */}
-                    <h2 className="bgc">Stay in</h2>
-                    <h2>Touch</h2>
-                    <Arrow className="arrow" />
-                </div>
+                {
+                        !isTablet &&
+                        <div className="container footy index1">
+                            <h2 className="bgc">Stay in</h2>
+                            <h2>Touch</h2>
+                            <Arrow className="arrow" />
+                        </div>
+                }
             </div>
         </>
     )
