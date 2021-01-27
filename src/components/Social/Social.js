@@ -43,25 +43,27 @@ function Social() {
                                 <h4>Socials & +</h4>
                             </div>
                     }
-                    {
-                        socials.map(({media, link, svg}, key) => (
-                            <>
-                                <Link to={{ pathname: link }} className="social-links" target="_blank">
-                                    {
-                                        !isTablet &&
-                                            <h5 className="mb1">{media}</h5>
+                    <div className="social-box">
+                        {
+                            socials.map(({media, link, svg}, key) => (
+                                <>
+                                    <Link to={{ pathname: link }} className="social-links" target="_blank">
+                                        {
+                                            !isTablet &&
+                                                <h5 className="mb1">{media}</h5>
+                                        }
+                                        {
+                                            isTablet &&
+                                                svg
+                                        }
+                                    </Link>
+                                    {key < socials.length-1 && !isTablet &&
+                                        <div className="line mb1"></div>
                                     }
-                                    {
-                                        isTablet &&
-                                            svg
-                                    }
-                                </Link>
-                                {key < socials.length-1 && !isTablet &&
-                                    <div className="line mb1"></div>
-                                }
-                            </>
-                        ))
-                    }
+                                </>
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
         </div>

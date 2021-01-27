@@ -1,34 +1,43 @@
 .social{
     display: flex;
     flex-direction: column;
+    padding-bottom: 1.5rem 0;
+
     @include media(">=tablet") {
         position: absolute;
         top: 100px;
         height: calc(100vh - 100px);
         width: 100%;
     };
+
     @include media(">=desktop") {
         flex-direction: row-reverse;
     };
-    @include media("<tablet") {
-        padding: 2rem 0 1.5rem;
-    };
-    .social-links{
-        text-decoration: none;
-        color: $pale;
-    }
-    a{
-        display: inline-block;
+
+    .social-box{
         @include media(">=tablet") {
-            position: relative;
-            top: 1.5rem;
-            width: 2.4rem;
-            margin-right: 2.5rem;
-            margin-bottom: 2.5rem;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 13.8rem;
         }
-    }
-    .social-icon{
-        height: 2.4rem;
-        width: 2.4rem;
+        @include media(">=desktop") {
+            margin-top: 1.5rem;
+        }
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: $pale;
+            @include media(">=tablet") {
+                height: 2.6rem;
+                width: 2.6rem;
+                margin-right: 2rem;
+                margin-bottom: 2rem;
+                .social-icon{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
     }
 }
